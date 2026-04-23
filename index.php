@@ -628,7 +628,7 @@
 
     </div>
     <div class="footer-bottom">
-      <span>© <?= date('Y') ?> Atelier du Guidon · Bordeaux · SIRET 000 000 000 00000</span>
+      <span>© <?= date('Y') ?> Atelier du Guidon · Bordeaux · SIRET 000 000 000 00000 <span style="opacity:.4;font-size:.7rem">v1.0.5</span></span>
       <nav class="footer-legal" aria-label="Liens légaux">
         <a href="mentions-legales.php">Mentions légales</a>
         <a href="cgv.php">CGV</a>
