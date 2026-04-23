@@ -85,7 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
       try {
         const fd = new FormData(rdvForm);
         const payload = Object.fromEntries(fd.entries());
-        const res = await fetch('/api/send', {
+        const endpoint = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+          ? '/send.php'
+          : '/api/send';
+        const res = await fetch(endpoint, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
