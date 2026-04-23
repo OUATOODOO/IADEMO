@@ -100,11 +100,21 @@ export default async function handler(req, res) {
   });
 
   const mjAuth = Buffer.from(`${MJ_APIKEY_PUBLIC}:${MJ_APIKEY_PRIVATE}`).toString('base64');
-  fetch('https://api.mailjet.com/v3.1/send', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json', 'Authorization': `Basic ${mjAuth}` },
-    body: mjBody,
-  }).catch(() => {}); // best-effort, pas bloquant
+  try {
+    const mjRes = await fetch('https://api.mailjet.com/v3.1/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Authorization': `Basic ${mjAuth}` },
+      body: mjBody,
+    });
+    const mjJson = await mjRes.json();
+    if (!mjRes.ok) {
+      console.error('[Mailjet] HTTP', mjRes.status, JSON.stringify(mjJson));
+    } else {
+      console.log('[Mailjet] OK', mjJson?.Messages?.[0]?.Status);
+    }
+  } catch (err) {
+    console.error('[Mailjet] fetch error:', err.message);
+  }
 
   return res.status(200).json({ ok: true });
 }
