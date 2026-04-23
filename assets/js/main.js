@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.textContent = 'Envoi en cours…';
 
       try {
-        const res = await fetch('send.php', {
+        const res = await fetch('/api/send', {
           method: 'POST',
           body: new FormData(rdvForm),
         });
