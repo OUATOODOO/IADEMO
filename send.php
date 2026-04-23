@@ -8,9 +8,7 @@
 
 header('Content-Type: application/json; charset=UTF-8');
 
-// ── Configuration Supabase ─────────────────────────────────
-define('SUPABASE_URL',     'https://oozngkpfjdvmkounialr.supabase.co');
-define('SUPABASE_ANON_KEY','eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9vem5na3BmamR2bWtvdW5pYWxyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY4OTkzMTAsImV4cCI6MjA5MjQ3NTMxMH0.iCvamljc5WswvSthO7fqmFFvtiHFoT8jr_kxoKOlH6k');
+require_once __DIR__ . '/config.php';
 
 // Bloquer les requêtes non-POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -76,24 +74,38 @@ if ($sbHttpCode >= 300) {
     exit;
 }
 
-// ── 2. Notification email (best-effort) ───────────────────
-$to      = 'contact@atelierduguidon.fr';
-$subject = '[RDV] Demande de rendez-vous — ' . $service;
+// ── 2. Notification email via Mailjet (best-effort) ────────
+$mjSubject = '[RDV] Demande de rendez-vous — ' . $service;
 
-$body  = "Nouvelle demande de rendez-vous :\n\n";
-$body .= "Nom       : {$nom}\n";
-$body .= "Téléphone : {$tel}\n";
-$body .= "Email     : {$email}\n";
-$body .= "Service   : {$service}\n";
-$body .= "Message   :\n{$message}\n";
-$body .= "\n---\nEnvoyé depuis le site Atelier du Guidon\n";
-$body .= "Voir tous les RDV : https://supabase.com/dashboard/project/oozngkpfjdvmkounialr/editor\n";
+$mjTextBody  = "Nouvelle demande de rendez-vous :\n\n";
+$mjTextBody .= "Nom       : {$nom}\n";
+$mjTextBody .= "Téléphone : {$tel}\n";
+$mjTextBody .= "Email     : {$email}\n";
+$mjTextBody .= "Service   : {$service}\n";
+$mjTextBody .= "Message   :\n{$message}\n";
+$mjTextBody .= "\n---\nEnvoyé depuis le site Atelier du Guidon\n";
+$mjTextBody .= "Voir tous les RDV : https://supabase.com/dashboard/project/oozngkpfjdvmkounialr/editor\n";
 
-$headers  = "From: noreply@atelierduguidon.fr\r\n";
-$headers .= "Reply-To: {$email}\r\n";
-$headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+$mjPayload = json_encode([
+    'Messages' => [[
+        'From'     => ['Email' => MJ_FROM_EMAIL, 'Name' => MJ_FROM_NAME],
+        'To'       => [['Email' => MJ_TO_EMAIL]],
+        'ReplyTo'  => ['Email' => $email, 'Name' => $nom],
+        'Subject'  => $mjSubject,
+        'TextPart' => $mjTextBody,
+    ]],
+]);
 
-mail($to, $subject, $body, $headers); // best-effort, pas bloquant
+$mjCh = curl_init('https://api.mailjet.com/v3.1/send');
+curl_setopt_array($mjCh, [
+    CURLOPT_RETURNTRANSFER => true,
+    CURLOPT_POST           => true,
+    CURLOPT_POSTFIELDS     => $mjPayload,
+    CURLOPT_USERPWD        => MJ_APIKEY_PUBLIC . ':' . MJ_APIKEY_PRIVATE,
+    CURLOPT_HTTPHEADER     => ['Content-Type: application/json'],
+    CURLOPT_TIMEOUT        => 10,
+]);
+curl_exec($mjCh); // best-effort, pas bloquant
+curl_close($mjCh);
 
 echo json_encode(['ok' => true]);
