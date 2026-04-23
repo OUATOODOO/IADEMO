@@ -24,7 +24,29 @@ export default async function handler(req, res) {
     return res.status(405).json({ ok: false, error: 'Method Not Allowed' });
   }
 
-  const body = req.body ?? {};
+  // Supporter FormData (multipart/form-data ou application/x-www-form-urlencoded)
+  // ET JSON selon ce que le client envoie
+  let body = {};
+  const ct = req.headers['content-type'] ?? '';
+  if (ct.includes('application/json')) {
+    body = req.body ?? {};
+  } else {
+    // Vercel parse automatiquement urlencoded dans req.body
+    body = req.body ?? {};
+    // Si req.body est vide (FormData multipart), lire le raw body
+    if (!body.nom) {
+      const raw = await new Promise((resolve) => {
+        let data = '';
+        req.on('data', chunk => { data += chunk; });
+        req.on('end', () => resolve(data));
+      });
+      raw.split('&').forEach(pair => {
+        const [k, v] = pair.split('=').map(decodeURIComponent);
+        if (k) body[k] = v ?? '';
+      });
+    }
+  }
+
   const nom     = clean(body.nom);
   const tel     = clean(body.tel);
   const email   = clean(body.email);

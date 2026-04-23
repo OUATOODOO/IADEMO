@@ -83,9 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.textContent = 'Envoi en cours…';
 
       try {
+        const fd = new FormData(rdvForm);
+        const payload = Object.fromEntries(fd.entries());
         const res = await fetch('/api/send', {
           method: 'POST',
-          body: new FormData(rdvForm),
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
         });
         const json = await res.json();
         if (json.ok) {
