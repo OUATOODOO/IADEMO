@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Atelier du Guidon — Réparation vélo à Bordeaux · Bonus Réparation labellisé</title>
+  <meta name="description" content="Atelier de réparation et révision vélos à Bordeaux. Labellisé Bonus Réparation. Spécialiste VAE Bosch & Shimano. Prise de RDV en ligne. Forfaits à partir de 39 €.">
+
+  <!-- Open Graph -->
+  <meta property="og:title"       content="Atelier du Guidon — Réparation vélo Bordeaux">
+  <meta property="og:description" content="Votre vélo réparé, vite et bien. Labellisé Bonus Réparation. RDV en ligne.">
+  <meta property="og:type"        content="website">
+  <meta property="og:locale"      content="fr_FR">
+
+  <!-- Favicon SVG inline -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23e8845a'/><text y='22' x='5' font-size='18'>🚲</text></svg>">
+
+  <!-- Preload CSS -->
+  <link rel="preload" href="assets/css/style.css" as="style">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness","BicycleShop"],
+    "name": "Atelier du Guidon",
+    "description": "Atelier de réparation et révision vélos à Bordeaux, spécialiste VAE, labellisé Bonus Réparation.",
+    "url": "https://atelierduguidon.fr",
+    "telephone": "+33556000000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12 rue de la Bicicle",
+      "addressLocality": "Bordeaux",
+      "postalCode": "33000",
+      "addressCountry": "FR"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 44.837789, "longitude": -0.57918 },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:00", "closes": "19:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "09:00", "closes": "17:00" }
+    ],
+    "priceRange": "€€",
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.9", "reviewCount": "127" }
+  }
+  </script>
+</head>
+<body>
+
+<!-- ──────────────────── NAV ──────────────────── -->
+<header>
+  <nav class="site-nav" aria-label="Navigation principale">
+    <div class="container nav-inner">
+      <a href="#accueil" class="nav-logo" aria-label="Atelier du Guidon — accueil">
+        <div class="nav-logo-icon" aria-hidden="true">🚲</div>
+        <span>Atelier du Guidon</span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#vae">VAE</a></li>
+        <li><a href="#bonus">Bonus Réparation</a></li>
+        <li><a href="#atelier">L'atelier</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#rdv" class="btn btn-primary nav-cta">Prendre RDV</a>
+      <button class="nav-hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav id="mobile-menu" class="mobile-menu" aria-label="Menu mobile">
+      <a href="#services">Services &amp; tarifs</a>
+      <a href="#vae">Vélo électrique (VAE)</a>
+      <a href="#bonus">Bonus Réparation</a>
+      <a href="#atelier">L'atelier</a>
+      <a href="#contact">Contact</a>
+      <a href="#rdv" class="btn btn-primary">Prendre RDV</a>
+    </nav>
+  </nav>
+</header>
+
+<!-- ──────────────────── HERO ──────────────────── -->
+<main>
+<section class="hero" id="accueil" aria-labelledby="hero-title">
+  <div class="container hero-inner">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-stars" aria-label="Note 4,9 sur 5">★★★★★</span>
+        <span class="hero-rating">4,9/5 · 127 avis Google</span>
+        <span class="badge badge-green">✓ Labellisé Bonus Réparation</span>
+      </div>
+      <h1 id="hero-title">Votre vélo réparé,<br><em>vite et bien.</em></h1>
+      <p class="hero-desc">
+        L'atelier de réparation et révision vélos à Bordeaux. Forfaits transparents,
+        prise de RDV en ligne, spécialiste VAE Bosch &amp; Shimano.
+        <strong>Bonus Réparation jusqu'à -30 €.</strong>
+      </p>
+      <div class="hero-actions">
+        <a href="#rdv" class="btn btn-primary btn-lg">📅 Prendre RDV</a>
+        <a href="#services" class="btn btn-secondary btn-lg">Voir les tarifs</a>
+      </div>
+      <div class="hero-badges">
+        <span class="badge badge-bonus">🏷️ Bonus Réparation -30 €</span>
+        <span class="badge badge-gray">⚡ Spécialiste VAE</span>
+        <span class="badge badge-green">📍 Bordeaux centre</span>
+      </div>
+    </div>
+    <div class="hero-visual" role="img" aria-label="Illustration atelier vélo">🚲</div>
+  </div>
+</section>
+
+<!-- ──────────────────── CONFIANCE ──────────────────── -->
+<section class="trust" aria-label="Nos engagements">
+  <div class="container">
+    <ul class="trust-grid fade-in" role="list">
+      <li class="trust-item">
+        <div class="trust-icon" aria-hidden="true">⚡</div>
+        <div>
+          <h3>Réparation rapide</h3>
+          <p>Petites réparations en 30 min, révision complète sous 48 h</p>
+        </div>
+      </li>
+      <li class="trust-item">
+        <div class="trust-icon" aria-hidden="true">💶</div>
+        <div>
+          <h3>Prix transparents</h3>
+          <p>Tarifs affichés TTC · Main d'œuvre 75 €/h · Devis gratuit</p>
+        </div>
+      </li>
+      <li class="trust-item">
+        <div class="trust-icon" aria-hidden="true">🏅</div>
+        <div>
+          <h3>Labellisé Bonus Réparation</h3>
+          <p>Économisez jusqu'à -30 € sur vos réparations grâce au dispositif national</p>
+        </div>
+      </li>
+      <li class="trust-item">
+        <div class="trust-icon" aria-hidden="true">🛠️</div>
+        <div>
+          <h3>Artisan qualifié</h3>
+          <p>10 ans d'expérience · Formations Bosch, Shimano, Yamaha</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ──────────────────── FORFAITS ──────────────────── -->
+<section class="forfaits" id="services" aria-labelledby="forfaits-title">
+  <div class="container">
+    <div class="forfaits-header fade-in">
+      <span class="section-label">Nos forfaits révision</span>
+      <h2 class="section-title" id="forfaits-title">Des tarifs clairs, zéro mauvaise surprise</h2>
+      <p class="section-desc" style="margin:0.75rem auto 0">
+        Tous nos forfaits incluent un diagnostic complet. Pièces détachées facturées séparément au coût réel.
+      </p>
+    </div>
+    <div class="forfaits-grid">
+
+      <article class="forfait-card fade-in">
+        <div class="forfait-icon" aria-hidden="true">🔧</div>
+        <h3 class="forfait-name">Révision Essentielle</h3>
+        <div class="forfait-price">39 € <span>TTC</span></div>
+        <div class="forfait-bonus">🏷️ Bonus Réparation -15 € applicable</div>
+        <ul class="forfait-list" role="list">
+          <li>Gonflage pneus &amp; vérification</li>
+          <li>Réglage freins</li>
+          <li>Réglage dérailleur</li>
+          <li>Graissage chaîne</li>
+          <li>Contrôle éclairage</li>
+        </ul>
+        <a href="#rdv" class="btn btn-secondary" onclick="preselectService('essentielle')">Réserver ce forfait</a>
+      </article>
+
+      <article class="forfait-card featured fade-in" aria-label="Forfait le plus populaire">
+        <div class="forfait-badge">⭐ Le plus populaire</div>
+        <div class="forfait-icon" aria-hidden="true">🚴</div>
+        <h3 class="forfait-name">Révision Complète</h3>
+        <div class="forfait-price">79 € <span>TTC</span></div>
+        <div class="forfait-bonus">🏷️ Bonus Réparation -15 € applicable</div>
+        <ul class="forfait-list" role="list">
+          <li>Tout l'Essentiel</li>
+          <li>Démontage-remontage roues</li>
+          <li>Centrage roues (voilage léger)</li>
+          <li>Contrôle roulements</li>
+          <li>Nettoyage transmission</li>
+          <li>Vérification câbles &amp; gaines</li>
+        </ul>
+        <a href="#rdv" class="btn btn-primary" onclick="preselectService('complete')">Réserver ce forfait</a>
+      </article>
+
+      <article class="forfait-card fade-in">
+        <div class="forfait-icon" aria-hidden="true">🏆</div>
+        <h3 class="forfait-name">Révision Intégrale</h3>
+        <div class="forfait-price">129 € <span>TTC</span></div>
+        <div class="forfait-bonus">🏷️ Bonus Réparation -30 € applicable</div>
+        <ul class="forfait-list" role="list">
+          <li>Tout de la Complète</li>
+          <li>Démontage complet</li>
+          <li>Nettoyage ultrason boîtier pédalier</li>
+          <li>Graissage intégral</li>
+          <li>Rapport d'intervention écrit</li>
+          <li>Garantie 3 mois pièces &amp; MO</li>
+        </ul>
+        <a href="#rdv" class="btn btn-secondary" onclick="preselectService('integrale')">Réserver ce forfait</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────── SERVICES RAPIDES ──────────────────── -->
+<section class="services-rapides" aria-labelledby="services-rapides-title">
+  <div class="container">
+    <div class="services-rapides-header fade-in">
+      <span class="section-label">Réparations à l'unité</span>
+      <h2 class="section-title" id="services-rapides-title">Une panne précise ? On s'en occupe.</h2>
+    </div>
+    <ul class="services-grid fade-in" role="list">
+      <li class="service-item">
+        <span class="service-item-icon" aria-hidden="true">🩹</span>
+        <div class="service-item-text">
+          <strong>Crevaison</strong>
+          <span>Dès 9 € · 30 min</span>
+        </div>
+      </li>
+      <li class="service-item">
+        <span class="service-item-icon" aria-hidden="true">🛑</span>
+        <div class="service-item-text">
+          <strong>Freins</strong>
+          <span>Réglage / remplacement</span>
+        </div>
+      </li>
+      <li class="service-item">
+        <span class="service-item-icon" aria-hidden="true">⚙️</span>
+        <div class="service-item-text">
+          <strong>Transmission</strong>
+          <span>Chaîne, plateau, cassette</span>
+        </div>
+      </li>
+      <li class="service-item">
+        <span class="service-item-icon" aria-hidden="true">🔗</span>
+        <div class="service-item-text">
+          <strong>Câbles &amp; gaines</strong>
+          <span>Remplacement complet</span>
+        </div>
+      </li>
+      <li class="service-item">
+        <span class="service-item-icon" aria-hidden="true">⚡</span>
+        <div class="service-item-text">
+          <strong>VAE &amp; électrique</strong>
+          <span>Diagnostic, batterie, MàJ</span>
+        </div>
+      </li>
+      <li class="service-item">
+        <span class="service-item-icon" aria-hidden="true">📦</span>
+        <div class="service-item-text">
+          <strong>Vélo cargo</strong>
+          <span>Boulot, bambins, livraison</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ──────────────────── VAE ──────────────────── -->
+<section class="vae" id="vae" aria-labelledby="vae-title">
+  <div class="container vae-inner">
+    <div class="vae-visual fade-in" role="img" aria-label="Illustration VAE">⚡🚲</div>
+    <div class="vae-content fade-in">
+      <span class="section-label">Vélo à assistance électrique</span>
+      <h2 class="section-title" id="vae-title">Spécialiste VAE<br>Bosch &amp; Shimano</h2>
+      <p style="color:var(--muted);margin-top:.75rem">
+        Votre VAE mérite un technicien formé. Diagnostic électronique,
+        mises à jour firmware, remplacement de batteries — on maîtrise les systèmes
+        des grandes marques.
+      </p>
+      <ul class="vae-list" role="list">
+        <li>
+          <span aria-hidden="true">🔍</span>
+          <span><strong>Diagnostic électronique</strong> — lecture des codes erreur Bosch, Yamaha, Brose</span>
+        </li>
+        <li>
+          <span aria-hidden="true">🔄</span>
+          <span><strong>Mises à jour firmware</strong> — motorisation et écran de bord</span>
+        </li>
+        <li>
+          <span aria-hidden="true">🔋</span>
+          <span><strong>Batterie</strong> — test capacité, remplacement, reconditionnement</span>
+        </li>
+        <li>
+          <span aria-hidden="true">📋</span>
+          <span><strong>Rapport d'intervention</strong> écrit fourni à chaque passage</span>
+        </li>
+      </ul>
+      <div class="vae-brands" aria-label="Marques agréées">
+        <span class="badge badge-gray">Bosch</span>
+        <span class="badge badge-gray">Shimano STEPS</span>
+        <span class="badge badge-gray">Yamaha</span>
+        <span class="badge badge-gray">Brose</span>
+        <span class="badge badge-gray">Fazua</span>
+      </div>
+      <div style="margin-top:1.5rem">
+        <a href="#rdv" class="btn btn-primary" onclick="preselectService('vae')">Prendre RDV VAE</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────── BONUS RÉPARATION ──────────────────── -->
+<section class="bonus" id="bonus" aria-labelledby="bonus-title">
+  <div class="container bonus-inner">
+    <div class="fade-in">
+      <div class="bonus-labeled">
+        <span class="section-label">Aide officielle 2026</span>
+        <span class="badge badge-bonus">🏅 Atelier labellisé</span>
+      </div>
+      <h2 class="section-title" id="bonus-title">Le Bonus Réparation,<br>c'est quoi ?</h2>
+      <p style="color:var(--muted);margin-top:.75rem;margin-bottom:1rem">
+        Un dispositif national qui vous rembourse une partie du coût de vos réparations.
+        Notre atelier est labellisé : vous n'avez <strong>rien à avancer</strong>, la déduction est appliquée
+        directement sur votre facture.
+      </p>
+      <div class="bonus-tiers" role="list">
+        <div class="bonus-tier" role="listitem">
+          <div class="bonus-tier-amount">-15 €</div>
+          <div class="bonus-tier-desc">
+            <strong>Dès 65 € de travaux</strong>
+            Révision Essentielle, réparations courantes
+          </div>
+        </div>
+        <div class="bonus-tier" role="listitem">
+          <div class="bonus-tier-amount">-30 €</div>
+          <div class="bonus-tier-desc">
+            <strong>Dès 120 € de travaux</strong>
+            Révision Intégrale, batterie VAE, grosse réparation
+          </div>
+        </div>
+      </div>
+      <p style="font-size:.82rem;color:var(--muted)">
+        Source : <em>Fonds de réparation — éco-organisme Ecologic (2026)</em>
+      </p>
+    </div>
+
+    <div class="bonus-simulator fade-in" aria-labelledby="sim-title">
+      <h3 id="sim-title">🧮 Estimez votre économie</h3>
+      <p style="font-size:.85rem;color:var(--muted);margin-bottom:1rem">
+        Sélectionnez le type de prestation envisagée :
+      </p>
+      <div class="sim-options" role="radiogroup" aria-label="Type de prestation">
+        <label class="sim-option selected">
+          <input type="radio" name="sim" value="petit"> Petite réparation (&lt; 65 €)
+        </label>
+        <label class="sim-option">
+          <input type="radio" name="sim" value="moyen"> Révision Essentielle (~65 €)
+        </label>
+        <label class="sim-option">
+          <input type="radio" name="sim" value="complet"> Révision Complète (~90 €)
+        </label>
+        <label class="sim-option">
+          <input type="radio" name="sim" value="integral"> Révision Intégrale (~120 €)
+        </label>
+      </div>
+      <div class="sim-result" id="sim-result" aria-live="polite" aria-atomic="true"></div>
+      <div style="margin-top:1.25rem">
+        <a href="#rdv" class="btn btn-primary" style="width:100%;justify-content:center">
+          Réserver avec le Bonus Réparation
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────── AVIS ──────────────────── -->
+<section class="avis" id="avis" aria-labelledby="avis-title">
+  <div class="container">
+    <div class="avis-header fade-in">
+      <span class="section-label">Ce qu'ils en disent</span>
+      <h2 class="section-title" id="avis-title">Ils nous font confiance</h2>
+      <div class="avis-global" aria-label="Note globale 4,9 sur 5, 127 avis">
+        <span class="avis-stars-big" aria-hidden="true">★★★★★</span>
+        <strong>4,9</strong>/5
+        <span style="color:var(--muted)">· 127 avis Google</span>
+      </div>
+    </div>
+    <div class="avis-grid">
+
+      <article class="avis-card fade-in">
+        <div class="avis-card-stars" aria-label="5 étoiles">★★★★★</div>
+        <p class="avis-card-text">
+          "Mon VAE Bosch avait un code erreur depuis 3 semaines. Deux autres ateliers
+          n'avaient pas pu diagnostiquer. L'Atelier du Guidon a réglé ça en 1 heure,
+          mise à jour firmware incluse. Tarif clair, accueil top."
+        </p>
+        <div class="avis-card-author">
+          <div class="avis-card-avatar" aria-hidden="true">MC</div>
+          <div>
+            <div class="avis-card-name">Marc C.</div>
+            <div class="avis-card-meta">Bordeaux · VAE Bosch</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="avis-card fade-in">
+        <div class="avis-card-stars" aria-label="5 étoiles">★★★★★</div>
+        <p class="avis-card-text">
+          "J'ai amené mes 3 vélos de famille pour une révision avant les vacances
+          sur la Vélodyssée. Forfait famille très avantageux, vélos rendus en parfait état.
+          Le Bonus Réparation a été déduit directement, sans paperasse !"
+        </p>
+        <div class="avis-card-author">
+          <div class="avis-card-avatar" style="background:var(--accent-2)" aria-hidden="true">SL</div>
+          <div>
+            <div class="avis-card-name">Sophie L.</div>
+            <div class="avis-card-meta">Mérignac · Révision famille</div>
+          </div>
+        </div>
+      </article>
+
+      <article class="avis-card fade-in">
+        <div class="avis-card-stars" aria-label="5 étoiles">★★★★★</div>
+        <p class="avis-card-text">
+          "Crevaison en plein trajet boulot, passé sans rendez-vous à l'heure du déjeuner.
+          Réparé en 20 minutes, prix affiché, aucune mauvaise surprise.
+          L'atelier qu'on voudrait dans chaque quartier."
+        </p>
+        <div class="avis-card-author">
+          <div class="avis-card-avatar" style="background:var(--accent-3);color:var(--text)" aria-hidden="true">CM</div>
+          <div>
+            <div class="avis-card-name">Claire M.</div>
+            <div class="avis-card-meta">Bordeaux Chartrons</div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────── ATELIER ──────────────────── -->
+<section class="atelier" id="atelier" aria-labelledby="atelier-title">
+  <div class="container atelier-inner">
+    <div class="atelier-photo fade-in" role="img" aria-label="Photo de l'atelier">🔧</div>
+    <div class="fade-in">
+      <span class="section-label">L'atelier</span>
+      <h2 class="section-title" id="atelier-title">Un artisan passionné,<br>pas une franchise.</h2>
+      <p style="color:var(--muted);margin-top:.75rem">
+        L'Atelier du Guidon, c'est [Prénom], mécanicien cycle depuis 10 ans, installé
+        à Bordeaux. Ici on répare votre vélo comme on aimerait que le nôtre soit réparé :
+        avec soin, transparence et le vrai prix affiché.
+      </p>
+      <ul class="atelier-values" role="list">
+        <li class="atelier-value">
+          <span aria-hidden="true">📍</span>
+          <div><strong>Local &amp; ancré dans le quartier</strong> — client depuis 2 ans ou de passage sur la Vélodyssée, même accueil.</div>
+        </li>
+        <li class="atelier-value">
+          <span aria-hidden="true">♻️</span>
+          <div><strong>Engagé pour la durabilité</strong> — on répare, on reconditionne, on évite le gaspillage.</div>
+        </li>
+        <li class="atelier-value">
+          <span aria-hidden="true">📚</span>
+          <div><strong>Formations continues</strong> — CQP Mécanicien Cycle, certifications Bosch, Shimano.</div>
+        </li>
+      </ul>
+      <a href="#rdv" class="btn btn-primary">Prendre RDV</a>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────── B2B ──────────────────── -->
+<section class="b2b" aria-labelledby="b2b-title">
+  <div class="container b2b-inner">
+    <div class="b2b-text">
+      <h2 id="b2b-title">Vous gérez une flotte vélo ?</h2>
+      <p>Contrats de maintenance, SLA, facturation entreprise — on s'occupe de tout.</p>
+    </div>
+    <a href="#rdv" class="btn btn-b2b" onclick="preselectService('b2b')">Demander un devis flotte</a>
+  </div>
+</section>
+
+<!-- ──────────────────── FORMULAIRE RDV ──────────────────── -->
+<section class="rdv" id="rdv" aria-labelledby="rdv-title">
+  <div class="container rdv-inner">
+
+    <div class="rdv-info fade-in">
+      <span class="section-label">Prise de rendez-vous</span>
+      <h2 id="rdv-title">On s'occupe de votre vélo 👋</h2>
+      <p>
+        Remplissez le formulaire, on vous rappelle sous 2 h (jours ouvrés) pour confirmer
+        votre créneau. Vous recevrez un email de confirmation.
+      </p>
+      <ul class="rdv-contact-list" role="list">
+        <li class="rdv-contact-item">
+          <div class="rdv-contact-icon" aria-hidden="true">📞</div>
+          <div>
+            <div style="font-size:.8rem;color:var(--muted)">Téléphone</div>
+            <a href="tel:+33556000000" style="font-weight:600">05 56 00 00 00</a>
+          </div>
+        </li>
+        <li class="rdv-contact-item">
+          <div class="rdv-contact-icon" aria-hidden="true">📍</div>
+          <div>
+            <div style="font-size:.8rem;color:var(--muted)">Adresse</div>
+            <span style="font-weight:600">12 rue de la Bicicle, 33000 Bordeaux</span>
+          </div>
+        </li>
+        <li class="rdv-contact-item">
+          <div class="rdv-contact-icon" aria-hidden="true">🕐</div>
+          <div>
+            <div style="font-size:.8rem;color:var(--muted)">Horaires</div>
+            <span style="font-weight:600">Lun–Ven 9h–19h · Sam 9h–17h</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="rdv-form-card fade-in">
+      <h3>📅 Demande de rendez-vous</h3>
+      <form id="rdv-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rdv-nom">Nom &amp; Prénom <abbr title="obligatoire">*</abbr></label>
+            <input type="text" id="rdv-nom" name="nom" required placeholder="Claire Dupont" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="rdv-tel">Téléphone <abbr title="obligatoire">*</abbr></label>
+            <input type="tel" id="rdv-tel" name="tel" required placeholder="06 12 34 56 78" autocomplete="tel">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="rdv-email">Email <abbr title="obligatoire">*</abbr></label>
+          <input type="email" id="rdv-email" name="email" required placeholder="claire@exemple.fr" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="rdv-service">Type de service <abbr title="obligatoire">*</abbr></label>
+          <select id="rdv-service" name="service" required>
+            <option value="">— Choisissez une prestation —</option>
+            <option value="essentielle">Révision Essentielle (39 €)</option>
+            <option value="complete">Révision Complète (79 €)</option>
+            <option value="integrale">Révision Intégrale (129 €)</option>
+            <option value="crevaison">Crevaison</option>
+            <option value="freins">Freins</option>
+            <option value="vae">Vélo électrique (VAE)</option>
+            <option value="b2b">Devis flotte entreprise</option>
+            <option value="autre">Autre / je ne sais pas encore</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="rdv-message">Description (optionnel)</label>
+          <textarea id="rdv-message" name="message" placeholder="Décrivez brièvement le problème ou le type de vélo (marque, modèle, VAE…)"></textarea>
+        </div>
+        <p style="margin-bottom:.75rem;font-size:.78rem;color:var(--muted)">
+          🔒 Vos données ne sont utilisées que pour gérer votre RDV — conformément au RGPD.
+        </p>
+        <button type="submit" class="btn btn-primary btn-lg form-submit-btn">
+          Envoyer ma demande →
+        </button>
+        <p class="form-note">Réponse sous 2 h · Lun–Ven</p>
+      </form>
+      <div id="form-success" class="form-success" role="alert">
+        <div class="form-success-icon" aria-hidden="true">🎉</div>
+        <h4>Demande envoyée !</h4>
+        <p>On vous rappelle sous 2 h pour confirmer votre créneau.<br>À très vite !</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<!-- ──────────────────── FOOTER ──────────────────── -->
+<footer class="site-footer" id="contact" aria-label="Pied de page">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div class="footer-about">
+        <div class="footer-logo">
+          <div class="footer-logo-icon" aria-hidden="true">🚲</div>
+          Atelier du Guidon
+        </div>
+        <p>Votre atelier de réparation vélos à Bordeaux. Artisan passionné, tarifs transparents, labellisé Bonus Réparation.</p>
+        <nav class="footer-socials" aria-label="Réseaux sociaux">
+          <a href="#" aria-label="Instagram Atelier du Guidon">📸</a>
+          <a href="#" aria-label="Facebook Atelier du Guidon">📘</a>
+          <a href="#" aria-label="Google Business Profile">📍</a>
+        </nav>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul role="list">
+          <li><a href="#services">Révision &amp; entretien</a></li>
+          <li><a href="#services">Réparation à l'unité</a></li>
+          <li><a href="#vae">Vélo électrique (VAE)</a></li>
+          <li><a href="#rdv">Devis flotte B2B</a></li>
+          <li><a href="#bonus">Bonus Réparation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>L'atelier</h4>
+        <ul role="list">
+          <li><a href="#atelier">Qui sommes-nous</a></li>
+          <li><a href="#avis">Avis clients</a></li>
+          <li><a href="mentions-legales.php">Mentions légales</a></li>
+          <li><a href="cgv.php">CGV</a></li>
+          <li><a href="confidentialite.php">Politique de confidentialité</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Horaires</h4>
+        <ul class="footer-hours" role="list">
+          <li><span>Lundi</span>     <span>9h – 19h</span></li>
+          <li><span>Mardi</span>     <span>9h – 19h</span></li>
+          <li><span>Mercredi</span>  <span>9h – 19h</span></li>
+          <li><span>Jeudi</span>     <span>9h – 19h</span></li>
+          <li><span>Vendredi</span>  <span>9h – 19h</span></li>
+          <li><span>Samedi</span>    <span>9h – 17h</span></li>
+          <li><span class="closed">Dimanche</span> <span class="closed">Fermé</span></li>
+        </ul>
+        <div style="margin-top:.85rem">
+          <a href="tel:+33556000000" style="color:var(--accent);font-weight:700;font-size:.95rem">
+            📞 05 56 00 00 00
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <span>© <?= date('Y') ?> Atelier du Guidon · Bordeaux · SIRET 000 000 000 00000</span>
+      <nav class="footer-legal" aria-label="Liens légaux">
+        <a href="mentions-legales.php">Mentions légales</a>
+        <a href="cgv.php">CGV</a>
+        <a href="confidentialite.php">Confidentialité</a>
+        <a href="#" id="cookie-reopen">Cookies</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<!-- ──────────────────── COOKIE BANNER ──────────────────── -->
+<div class="cookie-banner" id="cookie-banner" role="dialog" aria-label="Politique cookies" aria-modal="true">
+  <p>
+    🍪 Ce site n'utilise <strong>aucun cookie de traçage</strong>.
+    Un cookie technique mémorise votre choix ici.
+    <a href="confidentialite.php" style="color:var(--accent)">En savoir plus</a>
+  </p>
+  <div class="cookie-banner-actions">
+    <button class="btn btn-primary" id="cookie-accept" data-value="accepted">Accepter</button>
+    <button class="btn btn-secondary" id="cookie-refuse" data-value="refused">Refuser</button>
+  </div>
+</div>
+
+<script>
+function preselectService(value) {
+  var sel = document.getElementById('rdv-service');
+  if (sel) sel.value = value;
+  setTimeout(function() {
+    var rdv = document.getElementById('rdv');
+    if (rdv) rdv.scrollIntoView({ behavior: 'smooth' });
+  }, 100);
+  return false;
+}
+</script>
+<script src="assets/js/main.js" defer></script>
+
+</body>
+</html>
